@@ -8,6 +8,11 @@ class validacoesService{
     static validaTelefone(telefone){
         return true;
     }
+
+    static validaTip(tipTitle){
+
+        return tipTitle.length >= 5;
+    }
 }
 
 export default validacoesService;

@@ -1,4 +1,6 @@
 import { Database } from "../infra/Database.js";
+import randomNum from "./randomNum.js";
+
 
 class DatabaseMetodos {
   static listarTodoBanco() {
@@ -13,6 +15,18 @@ class DatabaseMetodos {
     Database.Usuarios = [...Database.Usuarios, usuario];
     return Database.Usuarios;
   }
+
+  static chooseTip(){
+    return Database.Tips[randomNum()];
+  }
+
+  static addTip(tip){
+    Database.Tips = [...Database.Tips, tip];
+    return Database.Tips;
+  }
+
+
+
 }
 
 export default DatabaseMetodos;
